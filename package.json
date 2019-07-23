@@ -4,9 +4,14 @@
   "description": "Bitcoin rewards for Github",
   "author": "Joe Forsmann <josephfo@microsoft.com> (http://localhost:1234)",
   "license": "ISC",
-  "repository": "https://github.com//bitcoin-rewards.git",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com//bitcoin-rewards.git"
+  },
   "homepage": "https://github.com//bitcoin-rewards",
-  "bugs": "https://github.com//bitcoin-rewards/issues",
+  "bugs": {
+    "url": "https://github.com//bitcoin-rewards/issues"
+  },
   "keywords": [
     "probot",
     "github",
@@ -24,8 +29,12 @@
     "@material-ui/core": "^4.2.1",
     "@material-ui/icons": "^4.2.1",
     "@types/nock": "^9.3.0",
+    "babel-cli": "^6.26.0",
+    "babel-preset-react-app": "^3.1.2",
+    "express": "^4.17.1",
     "nock": "^10.0.0",
-    "probot": "^7.2.0"
+    "probot": "^7.2.0",
+    "react": "^16.8.6"
   },
   "devDependencies": {
     "@types/jest": "^24.0.0",
@@ -33,6 +42,7 @@
     "eslint-plugin-typescript": "^0.14.0",
     "jest": "^24.0.0",
     "nodemon": "^1.17.2",
+    "react-scripts": "^3.0.1",
     "smee-client": "^1.0.2",
     "standard": "^12.0.1",
     "ts-jest": "^24.0.0",
@@ -53,5 +63,10 @@
   },
   "jest": {
     "testEnvironment": "node"
+  },
+  "main": "jest.config.js",
+  "directories": {
+    "lib": "lib",
+    "test": "test"
   }
 }
