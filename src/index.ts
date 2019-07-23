@@ -5,7 +5,7 @@ export = (app: Application) => {
   const router = app.route('/my-app');
 
   router.get('/hello-world', (req, res) => {
-    res.write('<p>Hello there</p>')
+    res.write('<script  /script>');
   });
 
   app.on('issues.opened', async (context) => {
