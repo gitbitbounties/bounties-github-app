@@ -4,6 +4,13 @@ const http = require('http');
 var QRCode = require('qrcode');
 
 export = (app: Application) => {
+  // Get an express router to expose new HTTP endpoints
+  const router = app.route('/my-app');
+
+  router.get('/hello-world', (req, res) => {
+    res.write('<script  /script>');
+  });
+
   app.on('issues.opened', async (context) => {
     console.log('ISSUE OPENED!!!');
     const issueComment = context.issue({ body: 'Thanks for opening this issue!' })
